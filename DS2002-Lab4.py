@@ -81,9 +81,6 @@ dates2 = [date.strftime("%b-%d-%Y") for date in dates1]
 #print(dt.datetime(dates1[0]))
 prices = stock_json4['chart']['result'][0]['indicators']['quote'][0]['high']
 
-print(prices)
-print(dates2)
-
 fig, ax = plt.subplots(figsize=(12,12))
 
 # Add x-axis and y-axis
