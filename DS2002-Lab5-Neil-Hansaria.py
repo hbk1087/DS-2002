@@ -1,11 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Nov 15 23:50:36 2022
-
-@author: neilhansaria
-"""
-
 #Lab 5: Python Webscraping and MongoDB lab
 
 import pandas as pd
