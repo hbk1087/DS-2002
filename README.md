@@ -1,5 +1,5 @@
 # DS-2002
-Repository of DS 2002 Assignments for Fall 2022
+Repository of DS 2002 Assignments for Fall 2022 by Neil Hansaria
 
 Lab 3: SQLite lab
 
