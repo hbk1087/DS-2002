@@ -41,7 +41,49 @@ def extract_names(filename):
   ['2006', 'Aaliyah 91', Aaron 57', 'Abagail 895', ' ...]
   """
   # +++your code here+++
-  return
+  f = open(filename, 'r')
+  f1 = f.read()
+  strings = re.findall(r'<td>\w+', f1)
+  strings1 = [s.replace('<td>', '') for s in strings]
+  #print(strings1)
+  rank = []
+  boys = []
+  girls = []
+  for x in range(len(strings1)):
+      if (((x + 1)/1)%3) == 1:
+          rank.append(strings1[x])
+      elif (((x + 1)/1)%3) == 2:
+          boys.append(strings1[x])
+      elif (((x + 1)/1)%3) == 0:
+          girls.append(strings1[x])
+          
+  boys_dict = {boys[i]: rank[i] for i in range(len(rank))}
+  girls_dict = {girls[i]: rank[i] for i in range(len(rank))}
+  
+  boys_final = []
+  girls_final = []
+ # print(len(strings))
+ # print(rank)
+  #print(boys_dict)
+  for k, v in boys_dict.items():
+      n1 = k + " " + v
+      boys_final.append(n1)
+      
+  for k, v in girls_dict.items():
+      n1 = k + " " + v
+      girls_final.append(n1)
+      
+  boys_final.sort()
+  final_names = boys_final + girls_final
+  final_names.sort()
+  year = re.findall(r'Popularity in \d+', f1)
+  year1 = year[0].replace('Popularity in ', '')
+  #print(final_names)
+  #print(year1)
+  
+  final_names.insert(0, year1)
+  #print(final_names)
+  return final_names
 
 
 def main():
@@ -50,15 +92,9 @@ def main():
   # which is the script itself.
   args = sys.argv[1:]
 
-  if not args:
-    print 'usage: [--summaryfile] file [file ...]'
-    sys.exit(1)
-
-  # Notice the summary flag and remove it from args if it is present.
-  summary = False
-  if args[0] == '--summaryfile':
-    summary = True
-    del args[0]
+  new = extract_names(args[0])
+  for e in new:
+      print(e)
 
   # +++your code here+++
   # For each filename, get the names, then either print the text output
@@ -66,3 +102,4 @@ def main():
   
 if __name__ == '__main__':
   main()
+
