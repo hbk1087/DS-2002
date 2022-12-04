@@ -8,3 +8,5 @@ Lab 4: Yahoo Finance API Lab
 Project 1: Cryptocurrency Midterm Project 1
 
 Lab 5: Python Webscraping and MongoDB lab
+
+Lab 6: Regular Expressions (babynames.py)
