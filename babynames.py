@@ -6,6 +6,8 @@
 # Google's Python Class
 # http://code.google.com/edu/languages/google-python-class/
 
+# Lab 6: Regular Expressions
+
 import sys
 import re
 
