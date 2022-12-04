@@ -1,4 +1,4 @@
-#Lab 5: Python Webscraping and MongoDB lab
+#Lab 5: Python Webscraping and MongoDB Lab
 
 import pandas as pd
 import numpy as np
